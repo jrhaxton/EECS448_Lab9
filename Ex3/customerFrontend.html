@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="formChecker.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form">
+            <h1>Store</h1>
+            <h2>Login</h2>
+            <form action="customerBackend.php" method="post">
+                <div class='login'>
+                    Username: <input name="username" id="user"><br><br>
+                    Password: <input name="password" id="pass">
+                </div>
+                <div class='menu'>
+                    <table>
+                        <tr>
+                            <th>
+                                Avatar: The Last Airbender ($24.99)
+                            </th>
+                            <th>
+                                Legend of Korra ($32.99)
+                            </th>
+                            <th>
+                                The Office ($111.99)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="atla.jpeg" alt="atla">
+                            </td>
+                            <td>
+                                <img src="lok.jpeg" alt="lok">
+
+                            </td>
+                            <td>
+                                <img src="to.jpeg" alt="to">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Quantity: <input type="number" min="0" id="atlaQ" name="atlaQ">
+                            </td>
+                            <td>
+                                Quantity: <input type="number" min="0" id="lokQ" name="lokQ">
+                            </td>
+                            <td>
+                                Quantity: <input type="number" min="0" id="toQ" name="toQ">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="shipping">
+                        <h3>Select Shipping</h3>
+                        <input type="radio" id="s1" name="shipping" value="Free Shipping">Free 7 Day<br>
+                        <input type="radio" id="s2" name="shipping" value="Overnight Shipping">Overnight($50.00)<br>
+                        <input type="radio" id="s3" name="shipping" value="3 Day Shipping">3 Day($5.00)<br>
+                    </div>
+                </div>
+                <button onclick="return verify()" type="submit" id="submitbutton">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </form>
+        </div>
+    </body>
+</html>
